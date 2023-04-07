@@ -20,6 +20,8 @@ if (typeof window !== 'undefined')
 else 
   themeValue = 'dark';
 
+console.log('themeValue: ', themeValue);
+
 const theme = extendTheme({ 
   colors,
   config: {
@@ -33,19 +35,22 @@ function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head />
-      <body>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <CacheProvider>
-          <ChakraProvider theme={theme}>
-            {children}
-          </ChakraProvider>
-        </CacheProvider>
-      </body>
-    </html>
+    <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <CacheProvider>
+        <ChakraProvider theme={theme}>
+          {children}
+        </ChakraProvider>
+      </CacheProvider>
+    </>
   )
 }
+
+  /*
+const NoSSRWrapper = ({children}: {children: React.ReactNode}) => ( 
+    <>{children}</> 
+) 
+   */
 
 export default dynamic(() => Promise.resolve(RootLayout), { 
     ssr: false 
