@@ -14,6 +14,9 @@ const colors = {
 
 const theme = extendTheme({ 
   colors,
+  config: {
+    initialColorMode: localStorage.getItem('chakra-ui-color-mode')||'light',
+  }
 });
 
 export default function RootLayout({
