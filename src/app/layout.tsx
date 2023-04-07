@@ -12,10 +12,17 @@ const colors = {
   },
 }
 
+
+let themeValue;
+if (typeof window !== 'undefined') 
+  themeValue = localStorage.getItem('chakra-ui-color-mode') || 'dark';
+else 
+  themeValue = 'dark';
+
 const theme = extendTheme({ 
   colors,
   config: {
-    initialColorMode: localStorage.getItem('chakra-ui-color-mode')||'light',
+    initialColorMode: themeValue
   }
 });
 
