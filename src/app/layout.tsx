@@ -27,7 +27,7 @@ const theme = extendTheme({
   }
 });
 
-function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -47,6 +47,8 @@ function RootLayout({
   )
 }
 
+  /*
 export default dynamic(() => Promise.resolve(RootLayout), { 
     ssr: false 
 })
+   */

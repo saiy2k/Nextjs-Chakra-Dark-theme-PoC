@@ -46,12 +46,6 @@ function RootLayout({
   )
 }
 
-  /*
-const NoSSRWrapper = ({children}: {children: React.ReactNode}) => ( 
-    <>{children}</> 
-) 
-   */
-
 export default dynamic(() => Promise.resolve(RootLayout), { 
     ssr: false 
 })
