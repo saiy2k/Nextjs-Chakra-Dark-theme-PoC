@@ -46,9 +46,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-  /*
-export default dynamic(() => Promise.resolve(RootLayout), { 
-    ssr: false 
-})
-   */

@@ -5,6 +5,7 @@ import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react'
 
+  /*
 const colors = {
   brand: {
     900: '#1a365d',
@@ -28,6 +29,7 @@ const theme = extendTheme({
     initialColorMode: themeValue
   }
 });
+   */
 
 function RootLayout({
   children,
@@ -36,12 +38,7 @@ function RootLayout({
 }) {
   return (
     <>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <CacheProvider>
-        <ChakraProvider theme={theme}>
-          {children}
-        </ChakraProvider>
-      </CacheProvider>
+      {children}
     </>
   )
 }
