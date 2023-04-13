@@ -1,8 +1,6 @@
 'use client';
 
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-import { chakra, Box, Button, IconButton, Text } from '@chakra-ui/react';
+import { Box, Button, IconButton, Text } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { useColorMode, useColorModeValue } from '@chakra-ui/system'
 import Image from 'next/image';
@@ -10,15 +8,13 @@ import Image from 'next/image';
 import Logo from '../images/logo.svg';
 import LogoWhite from '../images/logo-white.svg';
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
 
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <Box as='main' h='calc(100vh)' p={5}>
-      <Text as='h1'> Theme test page </Text>
+      <Text as='h1'> Theme test page - /src/app/app </Text>
 
       <br/>
 
