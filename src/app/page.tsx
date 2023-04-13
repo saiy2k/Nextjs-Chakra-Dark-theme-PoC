@@ -4,6 +4,7 @@ import { Box, Button, IconButton, Text } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { useColorMode, useColorModeValue } from '@chakra-ui/system'
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Logo from '../images/logo.svg';
 import LogoWhite from '../images/logo-white.svg';
@@ -17,6 +18,11 @@ export default function Home() {
       <Text as='h1'> Theme test page - /src/app </Text>
 
       <br/>
+
+      <Link href='./sub'> Goto sub page </Link>
+
+      <br />
+      <br />
 
       <IconButton 
         aria-label='Toggle theme' 
